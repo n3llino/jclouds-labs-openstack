@@ -22,8 +22,6 @@ import com.google.auto.value.AutoValue;
 
 /**
  * Representation of an OpenStack Poppy Service Logging.
- * 
- * @author agnello.staibano
  */
 @AutoValue
 public abstract class LogDelivery {

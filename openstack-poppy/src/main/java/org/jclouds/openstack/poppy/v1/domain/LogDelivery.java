@@ -29,10 +29,10 @@ public abstract class LogDelivery {
    /**
     * @return Specifies the delivery logging status
     */
-   public abstract Boolean getEnabled();
+   public abstract boolean getEnabled();
 
    @SerializedNames({ "enabled" })
-   private static LogDelivery create(Boolean enabled) {
+   private static LogDelivery create(boolean enabled) {
       return builder().enabled(enabled).build();
    }
 
@@ -45,7 +45,7 @@ public abstract class LogDelivery {
    }
 
    public static final class Builder {
-      private Boolean enabled;
+      private boolean enabled;
 
       Builder() {
       }
@@ -54,19 +54,12 @@ public abstract class LogDelivery {
          enabled(source.getEnabled());
       }
 
-      public LogDelivery.Builder enabled(Boolean enabled) {
+      public LogDelivery.Builder enabled(boolean enabled) {
          this.enabled = enabled;
          return this;
       }
 
       public LogDelivery build() {
-         String missing = "";
-         if (enabled == null) {
-            missing += " enabled";
-         }
-         if (!missing.isEmpty()) {
-            throw new IllegalStateException("Missing required properties:" + missing);
-         }
          LogDelivery result = new AutoValue_LogDelivery(this.enabled);
          return result;
       }

@@ -75,7 +75,7 @@ public class ServiceApiLiveTest extends BasePoppyApiLiveTest {
                                              .build())).build()))
                      .caching(ImmutableList.of(Caching.builder().name("default").ttl(3600).build()))
                      .flavorId(flavorApi.list().first().get().getId())
-                     .logDelivery(LogDelivery.builder().enabled(Boolean.FALSE).build())
+                     .logDelivery(LogDelivery.builder().enabled(false).build())
                      .build()
          );
 

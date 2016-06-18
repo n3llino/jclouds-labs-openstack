@@ -79,7 +79,7 @@ public class ServiceApiMockTest extends BasePoppyApiMockTest {
                .caching(ImmutableList.of(
                      Caching.builder().name("default").ttl(3600).build()))
                .flavorId("cdn")
-               .logDelivery(LogDelivery.builder().enabled(Boolean.FALSE).build())
+               .logDelivery(LogDelivery.builder().enabled(false).build())
                .build();
 
          URI uri = api.create(options);

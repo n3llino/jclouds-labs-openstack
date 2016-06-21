@@ -37,7 +37,7 @@ public abstract class Origin {
    /**
     * @see Builder#hostHeaderValue(String)
     */
-   public abstract String getHostHeaderValue();
+   @Nullable public abstract String getHostHeaderValue();
    
    /**
     * @see Builder#origin(String)

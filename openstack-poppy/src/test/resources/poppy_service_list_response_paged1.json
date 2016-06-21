@@ -98,6 +98,7 @@
           "ssl": false
         },
         {
+          "hostheadertype": "domain",
           "origin": "77.66.55.44",
           "port": 80,
           "ssl": false,

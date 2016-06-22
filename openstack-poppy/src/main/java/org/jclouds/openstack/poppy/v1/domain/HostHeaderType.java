@@ -23,19 +23,13 @@ package org.jclouds.openstack.poppy.v1.domain;
  * Defaults to domain.
  */
 public enum HostHeaderType {
-   DOMAIN("domain"),
-   ORIGIN("origin"),
-   CUSTOM("custom");
-
-   private String name;
-
-   private HostHeaderType(String name) {
-      this.name = name;
-   }
+   DOMAIN,
+   ORIGIN,
+   CUSTOM;
 
    @Override
    public String toString() {
-      return name;
+      return name().toLowerCase();
    }
 
    /*
@@ -46,7 +40,7 @@ public enum HostHeaderType {
    public static HostHeaderType fromValue(String name) {
       if (name != null) {
          for (HostHeaderType value : HostHeaderType.values()) {
-            if (name.equalsIgnoreCase(value.name)) {
+            if (name.equalsIgnoreCase(value.name())) {
                return value;
             }
          }
